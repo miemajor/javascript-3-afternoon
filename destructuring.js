@@ -22,6 +22,7 @@ var carDetails = {
 */
 
 //Code Here
+let {color, make, model, year} = carDetails;
 
 
 
@@ -35,6 +36,9 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  let {firstName,lastName,title} = obj;
+  
+
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -54,6 +58,21 @@ function greeting( obj ) {
 */
 
 //Code Here
+let object = {
+  utah: 1,
+  california:2,
+  texas:3,
+  arizona:4,
+}
+
+totalPopulation = object =>{
+  let {utah, california, texas, arizona} = object;
+  let total = utah+california+texas+arizona;
+  return total;
+
+   
+
+}
 
 
 
@@ -68,6 +87,25 @@ function greeting( obj ) {
 */
 
 //Code Here
+function ingredients(object){
+  let{carb, fat, protein} = object
+  return [carb, fat, protein];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -86,6 +124,9 @@ function greeting( obj ) {
 */
 
 //Code Here
+function largeNumbers({first, second, third}){
+ return Math.min(first, second, third);}
+
 
 
 
@@ -98,5 +139,15 @@ function greeting( obj ) {
 */
 
 //Code Here
+function numberGroups({a, b, c}){
+  let largest = Math.max(a.length, b.length, c.length)
+    if (a.length === largest){
+      return a;
+    }else if(b.length === largest){
+      return b;
+    }else{
+      return c;
+    }
+}
 
 
