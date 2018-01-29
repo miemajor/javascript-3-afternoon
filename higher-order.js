@@ -21,15 +21,11 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers = mixedNumbers.filter(function(element){
-  if(element % 2 === 0){
-    return element;
+let evenNumbers = mixedNumbers.filter(function(e){
+  if(e%2===0){
+    return e;
   }else{}
 })
-
-
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -50,10 +46,9 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 //Code Here
-let postTaxPrices = prices.map(function(element){
-  return prices*element*.007;
-});
-
+let postTaxPrices = prices.map(function(e,i,arr){
+  e*1.07;
+})
 
 
 ////////// PROBLEM 3 //////////
@@ -99,11 +94,13 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest = monstersInYourPocket.filter(function(element){
-  if(element['CP'] > 200){
-    return element;
-  }else {}
+let myStrongest = monstersInYourPocket.filter(function(e,i,arr){
+  if(monstersInYourPocket[i]['CP']>200){
+    return monstersInYourPocket;
+  };
 })
+
+
 
 
 
@@ -120,11 +117,12 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a high order method to get sum of all the order totals
 */
 
+
 let ordersTotal = orders.map((element)=> {
-    let taxAmount = element.price*element.tax;
-    return element.price+taxAmount;
-  })
- console.log(ordersTotal);
+  let taxAmount = element.price*element.tax;
+  return element.price+taxAmount;
+})
+console.log(ordersTotal);
 
 
 
