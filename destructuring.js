@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-let {color, make, model, year} = carDetails;
+let {color, make, model, year}= carDetails;
 
 
 
@@ -36,7 +36,7 @@ let {color, make, model, year} = carDetails;
 
 function greeting( obj ) {
   //Code Here
-  let {firstName,lastName,title} = obj;
+  let {firstName, lastName, title}=obj;
   
 
   
@@ -58,20 +58,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-let object = {
-  utah: 1,
-  california:2,
-  texas:3,
-  arizona:4,
-}
-
-totalPopulation = object =>{
-  let {utah, california, texas, arizona} = object;
+function totalPopulation(obj){
+  let {utah, california, texas, arizona} = obj;
   let total = utah+california+texas+arizona;
   return total;
-
-   
-
 }
 
 
@@ -87,14 +77,10 @@ totalPopulation = object =>{
 */
 
 //Code Here
-function ingredients(object){
-  let{carb, fat, protein} = object
-  return [carb, fat, protein];
+function ingredients(obj){
+  let {carb, fat, protein} = obj; 
+  return [carb,fat,protein];
 }
-
-
-
-
 
 
 
@@ -124,8 +110,10 @@ function ingredients(object){
 */
 
 //Code Here
-function largeNumbers({first, second, third}){
- return Math.min(first, second, third);}
+let largeNumbers = obj =>{
+  let {first, second, third} = obj;
+  return Math.min(first,second,third);
+}
 
 
 
@@ -139,6 +127,7 @@ function largeNumbers({first, second, third}){
 */
 
 //Code Here
+
 function numberGroups({a, b, c}){
   let largest = Math.max(a.length, b.length, c.length)
     if (a.length === largest){
@@ -149,5 +138,3 @@ function numberGroups({a, b, c}){
       return c;
     }
 }
-
-
